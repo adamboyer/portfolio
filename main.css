@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-nav {
+        display: none;
+}
+
+/*Utilities*/
+.content-container {
+        padding: 0 15px;
+}
+
+/*Mobile */
+@media screen and (max-width: 475px) {
+    .mobile-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 55px;
+    }
+
+    .mobile-links {
+            display: none;
+    }
+
+    .ham-slice {
+            background-color: rgb(55, 68, 111); 
+            height: 2px;
+            width: 28px;
+            margin-top: 6px;
+    }
+
+
+}
