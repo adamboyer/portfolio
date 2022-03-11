@@ -8,13 +8,19 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="mobile-nav content-container">
+    <div id="mobile-nav" class="mobile-nav content-container">
         <h2 class="logo">Adam Boyer</h2>
-        <a class="hamburger">
-            <div class="ham-slice"></div>
-            <div class="ham-slice"></div>
-            <div class="ham-slice"></div>
-        </a>
+        <div class="hamburger" id="hamburger">
+            <div class="half-slices-container">
+              <div id="slice-1" class="half-ham-slice"></div><div id ="slice-2" class="half-ham-slice"></div>    
+            </div>
+            <div class="half-slices-container">
+              <div id="slice-3" class="half-ham-slice"></div><div id="slice-4" class="half-ham-slice"></div>
+            </div>
+            <div class="half-slices-container">
+              <div id ="slice-5"class="half-ham-slice"></div><div id="slice-6" class="half-ham-slice"></div>
+            </div>
+          </div>
     </div>
     <ul class="mobile-links">
         <li class="mobile-link">About</li>
@@ -22,5 +28,10 @@
         <li class="mobile-link">Work</li>
         <li class="mobile-link"><a class="btn btn-primary" href="#">Contact</li>
     </ul>
+    <div class="content-container">
+        <div class="hero-header">
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>

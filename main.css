@@ -19,6 +19,7 @@
             align-items: center;
             justify-content: space-between;
             height: 55px;
+            transition: ease-in .125s;
     }
 
     .mobile-links {
@@ -31,6 +32,66 @@
             width: 28px;
             margin-top: 6px;
     }
+
+    .ham-open {
+            background-color: blue;
+            height: 75vh;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 26px;
+        justify-content: space-between;
+      }
+      
+      .half-ham-slice {
+        background-color: black;
+        height: 2px;
+        width: 14px;
+        transition: ease-in .125s;
+      }
+      
+      .half-slices-container {
+        display: flex;
+      }
+      
+      .open #slice-1 {
+        background-color: red;
+        transform: translate(2px, 7px) rotate(45deg);
+        transition: ease-in .125s;
+      }
+      
+      .open #slice-2 {
+        background-color: red;
+        transform: translate(-2px, 7px) rotate(-45deg);
+        transition: ease-in .125s;
+      }
+      
+      .open #slice-5 {
+        background: red;
+        transform: translate(2px, -7px) rotate(-45deg);
+        transition: ease-in .125s;
+      }
+      
+      .open #slice-6 {
+        background: red;
+        transform: translate(-2px, -7px) rotate(45deg);
+        transition: ease-in .125s;
+      }
+      
+      .open #slice-3 {
+        background-color: transparent;
+        transform: translateX(-14px);
+        transition: ease-in .125s;
+      }
+      
+      .open #slice-4 {
+        background-color: transparent;
+        transform: translateX(14px);
+        transition: ease-in .125s;
+      }
 
 
 }
