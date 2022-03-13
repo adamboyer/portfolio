@@ -29,20 +29,6 @@ li {
 #mobile-links {
         display: none;
 }
-
-/*Animated square styles*/
-#img-animated-background {
-        height: 300px;
-        width: 300px;
-        opacity: 0;
-        display: grid;
-        grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
-        animation-name: fade-in-bk;
-        animation-delay: 1s;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-      }
-      
       
       .grey-circle {
         background-color: grey;
@@ -181,18 +167,8 @@ li {
         animation-iteration-count: infinite;
       }
       
-      /*The circle animation*/
-      @keyframes circle-animate {
-        0% {width: 7.25px; height: 5px;}
-        5% {width: 1px; height: 1px;}
-        10% {width: 7.25px; height: 7.25px;}
-        100% {width: 7.25px; height: 7.25px;}
-      }
 
-      @keyframes fade-in-bk {
-             from {opacity: 0;}
-             to {opacity: 1;} 
-      }
+
 
 /*Utilities*/
 .content-container {
@@ -351,8 +327,11 @@ li {
 
       #header-img-bk {
         animation-duration: 1s;
+        animation-delay: 1s;
+        transform: translateX(400px);
         animation-name: slidein;
         animation-iteration-count: 1;
+        animation-fill-mode: forwards;
         position: relative;
       }
 
@@ -372,6 +351,50 @@ li {
           transform: translateX(0);
         }
       }
-      
+
+      /*Animated square styles*/
+        #img-animated-background {
+                height: 300px;
+                width: 300px;
+                opacity: 0;
+                display: grid;
+                grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+                animation-name: fade-in-bk;
+                animation-delay: 2s;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+        }
+        
+        /*The circle animation*/
+        @keyframes circle-animate {
+                0% {width: 7.25px; height: 5px;}
+                5% {width: 1px; height: 1px;}
+                10% {width: 7.25px; height: 7.25px;}
+                100% {width: 7.25px; height: 7.25px;}
+        }
+
+        @keyframes fade-in-bk {
+                from {opacity: 0;}
+                to {opacity: 1;} 
+        }
+
+        /* Text animation for header */
+
+        .hero-header h2 {
+        animation-name: header-fade-in;
+        animation-duration: 1s;
+        }
+
+        @keyframes header-fade-in {
+                from {
+                        opacity: 0; 
+                        transform: translateY(-150px);
+                }
+
+                to {
+                        opacity: 1;
+                        transform: translateY(0);
+                }
+        }
 
 }
