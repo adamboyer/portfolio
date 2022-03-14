@@ -81,3 +81,24 @@ for(let i=0; i < circles.length; i++) {
     col++;
   }
 }
+
+/* Animatiom for elements coming into view */
+const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.classList.add("show")
+        } 
+      });
+    },
+    {
+      threshold: 0.25
+    }
+  );
+  
+  const scrollEls = document.querySelectorAll(".scrollShow");
+  
+  scrollEls.forEach((el) => {
+    observer.observe(el);
+  });

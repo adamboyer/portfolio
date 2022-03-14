@@ -195,6 +195,7 @@ li {
 
 .btn-primary:hover {
         background-color: var(--primary-color-hover);
+        cursor: pointer;
 }
 
 /*Mobile */
@@ -328,7 +329,8 @@ li {
       #header-img-bk {
         animation-duration: 1s;
         animation-delay: 1s;
-        transform: translateX(400px);
+        transform: translateX(75px);
+        opacity: 0;
         animation-name: slidein;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
@@ -343,7 +345,7 @@ li {
       @keyframes slidein {
         from {
           opacity: 0;
-          transform: translateX(400px);
+          transform: translateX(75px);
         }
       
         to {
@@ -383,6 +385,21 @@ li {
         .hero-header h2 {
         animation-name: header-fade-in;
         animation-duration: 1s;
+        margin-bottom: 20px;
+        }
+
+        .hero-header p {
+                animation-name: par-fade-in;
+                animation-duration: 1s;
+        }
+
+        .hero-header a {
+                animation-name: par-fade-in;
+                animation-delay: .25s;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+                opacity: 0;
+                margin-top: 20px;
         }
 
         @keyframes header-fade-in {
@@ -396,5 +413,75 @@ li {
                         transform: translateY(0);
                 }
         }
+
+        @keyframes par-fade-in {
+                from {
+                        opacity: 0;
+                        transform: translateY(100px);
+                }
+
+                to {
+                        opacity: 1;
+                        translate: transformY(0);
+                }
+        }
+
+        /*Styles for Services */
+
+        #services h2 {
+                text-align: center;
+                margin-top: 50px;
+        }
+
+        .service-card {
+                width: auto;
+                height: 250px;
+                background-color: white;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 0 30px;
+                margin-top: 30px;
+              }
+              
+        .service-icon {
+                height: 60px;
+                width: 60px;
+                font-size: 36px;
+                background-color: pink;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 30px;
+                margin-bottom: 20px;
+        }
+
+        /*Scroll styles and animation*/
+        .scrollShow {
+                opacity: 0;
+        }
+
+
+        .show {
+                animation-name: show-card;
+                animation-duration: 1s;
+                animation-fill-mode: fowards;
+        }
+              
+        @keyframes show-card {
+        from {
+                opacity: 0;
+                transform: translateY(100px);
+        }
+        to {
+                opacity: 1;
+                transform: translateY(0);
+        }
+        }
+
+        
 
 }
