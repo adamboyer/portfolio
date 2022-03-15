@@ -82,13 +82,13 @@ for(let i=0; i < circles.length; i++) {
   }
 }
 
-/* Animatiom for elements coming into view */
+/* Animatiom for service elements coming into view */
 const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.style.opacity = 1;
-          entry.target.classList.add("show")
+          entry.target.classList.add("show-service")
         } 
       });
     },
@@ -97,8 +97,29 @@ const observer = new IntersectionObserver(
     }
   );
   
-  const scrollEls = document.querySelectorAll(".scrollShow");
+  const scrollEls = document.querySelectorAll(".scrollShow-service");
   
   scrollEls.forEach((el) => {
     observer.observe(el);
+  });
+
+/* Animatiom for work elements coming into view */
+  const observer2 = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.classList.add("show-work")
+        } 
+      });
+    },
+    {
+      threshold: 0.25
+    }
+  );
+  
+  const scrollEls2 = document.querySelectorAll(".recent-work-card");
+  
+  scrollEls2.forEach((el) => {
+    observer2.observe(el);
   });
