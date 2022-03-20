@@ -123,3 +123,63 @@ const observer = new IntersectionObserver(
   scrollEls2.forEach((el) => {
     observer2.observe(el);
   });
+
+/* Animatiom for about elements coming into view */
+const observer3 = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.classList.add("show-about")
+      } 
+    });
+  },
+  {
+    threshold: 0.5
+  }
+);
+
+const scrollEls3 = document.querySelectorAll(".scrollShow-about");
+
+scrollEls3.forEach((el) => {
+  observer3.observe(el);
+});
+
+/*Animation for contact*/
+
+const observer4 = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.classList.add("show-contact")
+      } 
+    });
+  },
+  {
+    threshold: 0.5
+  }
+);
+
+const scrollEls4 = document.querySelectorAll(".scrollShow-contact");
+
+scrollEls4.forEach((el) => {
+  observer4.observe(el);
+});
+
+/* ScrollOver animation for recent work cards*/
+const backgroundResize = () => {
+  
+    console.log(this);
+  
+  
+}
+scrollEls2.forEach((el) =>{
+  el.addEventListener("mouseenter", (el) => {
+    el.target.style.backgroundSize = "800px";
+  });
+  el.addEventListener("mouseleave", (el) => {
+    el.target.style.backgroundSize = "600px";
+  });
+});
+
