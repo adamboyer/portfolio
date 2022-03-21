@@ -183,3 +183,27 @@ scrollEls2.forEach((el) =>{
   });
 });
 
+/*animation for form labels*/
+const inputs = document.querySelectorAll("input");
+
+inputs.forEach((el)=>{
+  el.addEventListener("focus", (el) => {
+    document.getElementById(el.target.name+"Label").classList.add("focused");
+  });
+  el.addEventListener("blur", (el) => {
+    document.getElementById(el.target.name+"Label").classList.remove("focused");
+  })
+});
+
+const textAreas = document.querySelectorAll("textarea");
+
+textAreas.forEach((el)=>{
+  el.addEventListener("focus", (el) => {
+    document.getElementById(el.target.name+"Label").classList.add("focused");
+  });
+  el.addEventListener("blur", (el) => {
+    document.getElementById(el.target.name+"Label").classList.remove("focused");
+  })
+});
+
+

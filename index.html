@@ -7,6 +7,7 @@
     <title>Adam's Portfolio</title>
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+    
     <script src="https://kit.fontawesome.com/706aea3010.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -229,7 +230,17 @@
             <h2>Let's Talk</h2>
             <br>
             <h1>I'm excited to help you make your idea a reality!</h1>
-            <a class="btn btn-primary">Email Me</a>
+            <form id="emailForm">
+                <label id="custNameLabel" for="custName">What's your name?</label>
+                <input name="custName" type="text"/>
+                <label id="custEmailLabel" for="custEmail">Your email address</label>
+                <input name="custEmail" type="email"\>
+                <label id="custMessageLabel" for="custMessage"> Tell me about the next project you're working on</label>
+                <textarea name="custMessage">
+                </textarea>
+                
+            </form>
+            <a id="email-me" class="btn btn-primary">Email Me</a>
             <a class="btn btn-transparent">Schedual a Call</a>
         </div>
     </div>
